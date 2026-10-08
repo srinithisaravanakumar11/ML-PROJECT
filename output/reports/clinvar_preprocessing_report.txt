@@ -1,0 +1,596 @@
+
+================================================================================
+  0. SETUP
+================================================================================
+  Script started at: 2026-10-08T09:20:53.691926
+  Input file: C:\Users\kavya\VariantIQ\variant_summary.txt.gz
+  Output directory: C:\Users\kavya\VariantIQ\output\data/
+
+================================================================================
+  1. DATASET INSPECTION
+================================================================================
+  Loading variant_summary.txt.gz …
+  Rows:    9,223,698
+  Columns: 43
+
+  --- Column Names ---
+    [ 0] #AlleleID
+    [ 1] Type
+    [ 2] Name
+    [ 3] GeneID
+    [ 4] GeneSymbol
+    [ 5] HGNC_ID
+    [ 6] ClinicalSignificance
+    [ 7] ClinSigSimple
+    [ 8] LastEvaluated
+    [ 9] RS# (dbSNP)
+    [10] nsv/esv (dbVar)
+    [11] RCVaccession
+    [12] PhenotypeIDS
+    [13] PhenotypeList
+    [14] Origin
+    [15] OriginSimple
+    [16] Assembly
+    [17] ChromosomeAccession
+    [18] Chromosome
+    [19] Start
+    [20] Stop
+    [21] ReferenceAllele
+    [22] AlternateAllele
+    [23] Cytogenetic
+    [24] ReviewStatus
+    [25] NumberSubmitters
+    [26] Guidelines
+    [27] TestedInGTR
+    [28] OtherIDs
+    [29] SubmitterCategories
+    [30] VariationID
+    [31] PositionVCF
+    [32] ReferenceAlleleVCF
+    [33] AlternateAlleleVCF
+    [34] SomaticClinicalImpact
+    [35] SomaticClinicalImpactLastEvaluated
+    [36] ReviewStatusClinicalImpact
+    [37] Oncogenicity
+    [38] OncogenicityLastEvaluated
+    [39] ReviewStatusOncogenicity
+    [40] SCVsForAggregateGermlineClassification
+    [41] SCVsForAggregateSomaticClinicalImpact
+    [42] SCVsForAggregateOncogenicityClassification
+
+  --- Data Types ---
+    #AlleleID                                 int64
+    Type                                      object
+    Name                                      object
+    GeneID                                    int64
+    GeneSymbol                                object
+    HGNC_ID                                   object
+    ClinicalSignificance                      object
+    ClinSigSimple                             int64
+    LastEvaluated                             object
+    RS# (dbSNP)                               int64
+    nsv/esv (dbVar)                           object
+    RCVaccession                              object
+    PhenotypeIDS                              object
+    PhenotypeList                             object
+    Origin                                    object
+    OriginSimple                              object
+    Assembly                                  object
+    ChromosomeAccession                       object
+    Chromosome                                object
+    Start                                     int64
+    Stop                                      int64
+    ReferenceAllele                           object
+    AlternateAllele                           object
+    Cytogenetic                               object
+    ReviewStatus                              object
+    NumberSubmitters                          int64
+    Guidelines                                object
+    TestedInGTR                               object
+    OtherIDs                                  object
+    SubmitterCategories                       int64
+    VariationID                               int64
+    PositionVCF                               int64
+    ReferenceAlleleVCF                        object
+    AlternateAlleleVCF                        object
+    SomaticClinicalImpact                     object
+    SomaticClinicalImpactLastEvaluated        object
+    ReviewStatusClinicalImpact                object
+    Oncogenicity                              object
+    OncogenicityLastEvaluated                 object
+    ReviewStatusOncogenicity                  object
+    SCVsForAggregateGermlineClassification    object
+    SCVsForAggregateSomaticClinicalImpact     object
+    SCVsForAggregateOncogenicityClassification  object
+
+  --- Missing Values ---
+    #AlleleID                                          0  (  0.00%)
+    Type                                               0  (  0.00%)
+    Name                                               0  (  0.00%)
+    GeneID                                             0  (  0.00%)
+    GeneSymbol                                         0  (  0.00%)
+    HGNC_ID                                            0  (  0.00%)
+    ClinicalSignificance                               0  (  0.00%)
+    ClinSigSimple                                      0  (  0.00%)
+    LastEvaluated                                      0  (  0.00%)
+    RS# (dbSNP)                                        0  (  0.00%)
+    nsv/esv (dbVar)                                    0  (  0.00%)
+    RCVaccession                                       0  (  0.00%)
+    PhenotypeIDS                                       0  (  0.00%)
+    PhenotypeList                                      0  (  0.00%)
+    Origin                                             0  (  0.00%)
+    OriginSimple                                       0  (  0.00%)
+    Assembly                                           0  (  0.00%)
+    ChromosomeAccession                                0  (  0.00%)
+    Chromosome                                         0  (  0.00%)
+    Start                                              0  (  0.00%)
+    Stop                                               0  (  0.00%)
+    ReferenceAllele                                    0  (  0.00%)
+    AlternateAllele                                    0  (  0.00%)
+    Cytogenetic                                        0  (  0.00%)
+    ReviewStatus                                       0  (  0.00%)
+    NumberSubmitters                                   0  (  0.00%)
+    Guidelines                                         0  (  0.00%)
+    TestedInGTR                                        0  (  0.00%)
+    OtherIDs                                           0  (  0.00%)
+    SubmitterCategories                                0  (  0.00%)
+    VariationID                                        0  (  0.00%)
+    PositionVCF                                        0  (  0.00%)
+    ReferenceAlleleVCF                                 0  (  0.00%)
+    AlternateAlleleVCF                                 0  (  0.00%)
+    SomaticClinicalImpact                              0  (  0.00%)
+    SomaticClinicalImpactLastEvaluated                 0  (  0.00%)
+    ReviewStatusClinicalImpact                         0  (  0.00%)
+    Oncogenicity                                       0  (  0.00%)
+    OncogenicityLastEvaluated                          0  (  0.00%)
+    ReviewStatusOncogenicity                           0  (  0.00%)
+    SCVsForAggregateGermlineClassification             0  (  0.00%)
+    SCVsForAggregateSomaticClinicalImpact              0  (  0.00%)
+    SCVsForAggregateOncogenicityClassification           0  (  0.00%)
+
+  --- Unique Values (categorical candidates) ---
+    Type                                              15 unique
+    Name                                       4,639,061 unique
+    GeneSymbol                                    42,863 unique
+    HGNC_ID                                       19,997 unique
+    ClinicalSignificance                             107 unique
+    LastEvaluated                                  6,843 unique
+    nsv/esv (dbVar)                               21,825 unique
+    RCVaccession                               4,645,406 unique
+    PhenotypeIDS                                 219,420 unique
+    PhenotypeList                                243,858 unique
+    Origin                                           185 unique
+    OriginSimple                                       6 unique
+    Assembly                                           4 unique
+    ChromosomeAccession                              141 unique
+    Chromosome                                        27 unique
+    ReferenceAllele                                   19 unique
+    AlternateAllele                                   29 unique
+    Cytogenetic                                    3,884 unique
+    ReviewStatus                                      10 unique
+    Guidelines                                         6 unique
+    TestedInGTR                                        2 unique
+    OtherIDs                                   2,908,526 unique
+    ReferenceAlleleVCF                            41,135 unique
+    AlternateAlleleVCF                            22,318 unique
+    SomaticClinicalImpact                              6 unique
+    SomaticClinicalImpactLastEvaluated               544 unique
+    ReviewStatusClinicalImpact                         5 unique
+    Oncogenicity                                       8 unique
+    OncogenicityLastEvaluated                         22 unique
+    ReviewStatusOncogenicity                           6 unique
+    SCVsForAggregateGermlineClassification     4,401,590 unique
+    SCVsForAggregateSomaticClinicalImpact          1,318 unique
+    SCVsForAggregateOncogenicityClassification       1,906 unique
+
+  --- Sample Rows (first 5) ---
+       #AlleleID                       Type                                     Name  GeneID GeneSymbol     HGNC_ID          ClinicalSignificance  ClinSigSimple LastEvaluated  RS# (dbSNP) nsv/esv (dbVar)                            RCVaccession                             PhenotypeIDS                            PhenotypeList            Origin OriginSimple Assembly ChromosomeAccession Chromosome     Start      Stop ReferenceAllele AlternateAllele Cytogenetic                             ReviewStatus  NumberSubmitters Guidelines TestedInGTR                                 OtherIDs  SubmitterCategories  VariationID  PositionVCF ReferenceAlleleVCF      AlternateAlleleVCF SomaticClinicalImpact SomaticClinicalImpactLastEvaluated ReviewStatusClinicalImpact Oncogenicity OncogenicityLastEvaluated ReviewStatusOncogenicity  SCVsForAggregateGermlineClassification SCVsForAggregateSomaticClinicalImpact SCVsForAggregateOncogenicityClassification
+    0      15041                      Indel  NM_014855.3(AP5Z1):c.80_83delinsTGCT...    9907      AP5Z1  HGNC:22197  Pathogenic/Likely pathogenic              1  Dec 17, 2024    397704705               -  RCV000000012|RCV005255549|RCV004998069  MONDO:MONDO:0013342,MedGen:C3150901,...  Hereditary spastic paraplegia 48|Mac...  germline;unknown     germline   GRCh37        NC_000007.13          7   4820844   4820847              na              na      7p22.1  criteria provided, multiple submitte...                 4          -           N        ClinGen:CA215070,OMIM:613653.0001                    3            2      4820844               GGAT  TGCTGTAAACTGTAACTGTAAA                     -                                  -                          -            -                         -                        -  SCV001451119|SCV005622007|SCV005909190                                     -                                        -  
+    1      15041                      Indel  NM_014855.3(AP5Z1):c.80_83delinsTGCT...    9907      AP5Z1  HGNC:22197  Pathogenic/Likely pathogenic              1  Dec 17, 2024    397704705               -  RCV000000012|RCV005255549|RCV004998069  MONDO:MONDO:0013342,MedGen:C3150901,...  Hereditary spastic paraplegia 48|Mac...  germline;unknown     germline   GRCh38        NC_000007.14          7   4781213   4781216              na              na      7p22.1  criteria provided, multiple submitte...                 4          -           N        ClinGen:CA215070,OMIM:613653.0001                    3            2      4781213               GGAT  TGCTGTAAACTGTAACTGTAAA                     -                                  -                          -            -                         -                        -  SCV001451119|SCV005622007|SCV005909190                                     -                                        -  
+    2      15042                   Deletion  NM_014855.3(AP5Z1):c.1413_1426del (p...    9907      AP5Z1  HGNC:22197                    Pathogenic              1  Jun 29, 2010    397704709               -                            RCV000000013  MONDO:MONDO:0013342,MedGen:C3150901,...         Hereditary spastic paraplegia 48          germline     germline   GRCh37        NC_000007.13          7   4827361   4827374              na              na      7p22.1           no assertion criteria provided                 1          -           N        ClinGen:CA215072,OMIM:613653.0002                    1            3      4827360    GCTGCTGGACCTGCC                       G                     -                                  -                          -            -                         -                        -                            SCV000020156                                     -                                        -  
+    3      15042                   Deletion  NM_014855.3(AP5Z1):c.1413_1426del (p...    9907      AP5Z1  HGNC:22197                    Pathogenic              1  Jun 29, 2010    397704709               -                            RCV000000013  MONDO:MONDO:0013342,MedGen:C3150901,...         Hereditary spastic paraplegia 48          germline     germline   GRCh38        NC_000007.14          7   4787730   4787743              na              na      7p22.1           no assertion criteria provided                 1          -           N        ClinGen:CA215072,OMIM:613653.0002                    1            3      4787729    GCTGCTGGACCTGCC                       G                     -                                  -                          -            -                         -                        -                            SCV000020156                                     -                                        -  
+    4      15043  single nucleotide variant  NM_014630.3(ZNF592):c.3136G>A (p.Gly...    9640     ZNF592  HGNC:28986        Uncertain significance              0  Jun 29, 2015    150829393               -                            RCV000000014  MONDO:MONDO:0033005,MedGen:C4551772,...                Galloway-Mowat syndrome 1          germline     germline   GRCh37         NC_000015.9         15  85342440  85342440              na              na     15q25.3           no assertion criteria provided                 1          -           N  ClinGen:CA210674,UniProtKB:Q92610#VA...                    1            4     85342440                  G                       A                     -                                  -                          -            -                         -                        -                            SCV000020157                                     -                                        -  
+
+  --- Column Role Mapping ---
+    variant_id                → VariationID
+    chromosome                → Chromosome
+    position_start            → PositionVCF
+    position_stop             → Stop
+    ref_allele                → ReferenceAlleleVCF
+    alt_allele                → AlternateAlleleVCF
+    gene_symbol               → GeneSymbol
+    gene_id                   → GeneID
+    variant_type              → Type
+    consequence               → ** NOT FOUND **
+    clinical_sig              → ClinicalSignificance
+    review_status             → ReviewStatus
+    phenotype                 → PhenotypeIDS
+    phenotype_list            → PhenotypeList
+    assembly                  → Assembly
+    rs_id                     → RS# (dbSNP)
+    nsv_esv                   → nsv/esv (dbVar)
+    origin                    → Origin
+    rcv_accession             → RCVaccession
+    variation_id              → VariationID
+    name                      → Name
+    submitted_assembly        → ** NOT FOUND **
+    number_submitters         → ** NOT FOUND **
+    guidelines                → Guidelines
+    other_ids                 → OtherIDs
+
+================================================================================
+  2. TARGET LABEL DEFINITION
+================================================================================
+  Column used: ClinicalSignificance
+
+  --- Raw ClinicalSignificance Distribution (top 30) ---
+    Uncertain significance                                         4,762,968  (51.64%)
+    Likely benign                                                  2,272,307  (24.64%)
+    -                                                                489,868  ( 5.31%)
+    Pathogenic                                                       403,178  ( 4.37%)
+    Benign                                                           395,526  ( 4.29%)
+    Conflicting classifications of pathogenicity                     356,304  ( 3.86%)
+    Likely pathogenic                                                263,254  ( 2.85%)
+    Benign/Likely benign                                             165,290  ( 1.79%)
+    Pathogenic/Likely pathogenic                                      87,609  ( 0.95%)
+    not provided                                                      14,687  ( 0.16%)
+    drug response                                                      3,794  ( 0.04%)
+    other                                                              3,057  ( 0.03%)
+    no classification for the single variant                           1,397  ( 0.02%)
+    risk factor                                                          748  ( 0.01%)
+    association                                                          682  ( 0.01%)
+    conflicting data from submitters                                     312  ( 0.00%)
+    Uncertain significance/Uncertain risk allele                         280  ( 0.00%)
+    no classifications from unflagged records                            278  ( 0.00%)
+    Affects                                                              275  ( 0.00%)
+    Likely risk allele                                                   174  ( 0.00%)
+    Pathogenic, low penetrance                                           165  ( 0.00%)
+    Pathogenic; other                                                    146  ( 0.00%)
+    Likely pathogenic, low penetrance                                    117  ( 0.00%)
+    VUS-mid                                                              116  ( 0.00%)
+    VUS-high                                                             112  ( 0.00%)
+    Pathogenic; drug response                                             81  ( 0.00%)
+    protective                                                            80  ( 0.00%)
+    Uncertain risk allele                                                 72  ( 0.00%)
+    Uncertain significance/VUS-high                                       46  ( 0.00%)
+    Pathogenic; risk factor                                               45  ( 0.00%)
+
+  --- Target Distribution (broad: includes Likely) ---
+    Excluded               5,636,534  (61.11%)
+    Benign                 2,833,123  (30.72%)
+    Pathogenic               754,041  (8.18%)
+
+  --- Target Distribution (strict: only pure P/B) ---
+    Excluded               8,424,994  (91.34%)
+    Pathogenic               403,178  (4.37%)
+    Benign                   395,526  (4.29%)
+
+  --- Excluded Category Breakdown ---
+    Uncertain significance                                         4,762,968
+    -                                                                489,868
+    Conflicting classifications of pathogenicity                     356,304
+    not provided                                                      14,687
+    drug response                                                      3,794
+    other                                                              3,057
+    no classification for the single variant                           1,397
+    risk factor                                                          748
+    association                                                          682
+    conflicting data from submitters                                     312
+    Uncertain significance/Uncertain risk allele                         280
+    no classifications from unflagged records                            278
+    Affects                                                              275
+    Likely risk allele                                                   174
+    Pathogenic, low penetrance                                           165
+    Pathogenic; other                                                    146
+    Likely pathogenic, low penetrance                                    117
+    VUS-mid                                                              116
+    VUS-high                                                             112
+    Pathogenic; drug response                                             81
+
+      DECISION: We use the BROAD mapping for binary classification:
+        Pathogenic class = 'Pathogenic' + 'Pathogenic/Likely pathogenic' + 'Likely pathogenic'
+        Benign class     = 'Benign' + 'Benign/Likely benign' + 'Likely benign'
+
+      RATIONALE:
+        - 'Likely pathogenic' and 'Likely benign' carry strong clinical evidence.
+        - Combining them is standard practice in published ClinVar ML studies.
+        - The 'label_definition' column preserves the original ClinVar label
+          so users can re-stratify later.
+
+      EXCLUDED categories (NOT used in binary classification):
+        - Uncertain significance — ambiguous; would add noise
+        - Conflicting interpretations — no clear ground truth
+        - Not provided, Drug response, Risk factor, etc. — not binary P/B
+      These are saved in removed_records.csv for transparency.
+    
+
+================================================================================
+  3. FILTERING UNRELIABLE RECORDS
+================================================================================
+  Rows before:  9,223,698
+  Rows removed: 5,636,534  — Non-binary clinical significance (Excluded category)
+  Rows after:   3,587,164
+
+  --- Assembly Distribution ---
+    GRCh37                           1,803,282
+    GRCh38                           1,778,236
+    na                                   3,756
+    NCBI36                               1,890
+
+  Selected assembly: GRCh38
+  Rows before:  3,587,164
+  Rows removed: 1,808,928  — Assembly != GRCh38
+  Rows after:   1,778,236
+
+  Rows before:  1,778,236
+  Rows removed:         0  — Missing target label
+  Rows after:   1,778,236
+
+  Rows before:  1,778,236
+  Rows removed:         0  — Missing chromosome or position
+  Rows after:   1,778,236
+
+  Rows before:  1,778,236
+  Rows removed:         2  — Invalid chromosome value
+  Rows after:   1,778,234
+
+  Rows before:  1,778,234
+  Rows removed:    13,880  — Invalid position value
+  Rows after:   1,764,354
+
+  Rows before:  1,764,354
+  Rows removed:         0  — Missing or invalid ref/alt allele
+  Rows after:   1,764,354
+
+  --- Review Status Distribution (after prior filters) ---
+    criteria provided, single submitter                                 1,257,966
+    criteria provided, multiple submitters, no conflicts                  426,191
+    no assertion criteria provided                                         62,028
+    reviewed by expert panel                                               18,146
+    practice guideline                                                         23
+  Rows before:  1,764,354
+  Rows removed:    62,028  — Insufficient review evidence
+  Rows after:   1,702,326
+
+
+================================================================================
+  4. DUPLICATE VARIANT HANDLING
+================================================================================
+  Variant key columns: ['Chromosome', 'PositionVCF', 'ReferenceAlleleVCF', 'AlternateAlleleVCF']
+  Unique variant keys: 1,702,326
+  Keys with >1 row:    0
+  Total duplicate rows: 0
+  Duplicate keys with SAME target:      0
+  Duplicate keys with CONFLICTING target: 0
+
+      DUPLICATE STRATEGY:
+        1. Conflicting targets (same variant, different P/B label) → Remove entirely.
+           Reason: no reliable ground truth for that variant.
+        2. Agreeing targets → Keep the row with the highest review confidence.
+           Review status priority (high → low):
+             practice guideline > reviewed by expert panel >
+             criteria provided, multiple submitters, no conflicts >
+             criteria provided, conflicting interpretations >
+             criteria provided, single submitter
+        3. Build a unique variant key for downstream train/test splitting
+           to prevent data leakage.
+    
+  Rows before:  1,702,326
+  Rows removed:         0  — Conflicting clinical significance duplicates
+  Rows after:   1,702,326
+
+  Rows before:  1,702,326
+  Rows removed:         0  — Duplicate variants (kept highest review)
+  Rows after:   1,702,326
+
+
+================================================================================
+  5. CATEGORICAL FIELD CLEANING
+================================================================================
+  Chromosome unique values: ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2', '20', '21', '22', '3', '4', '5', '6', '7', '8', '9', 'MT', 'X', 'Y']
+  Variant type unique values (8):
+    single nucleotide variant                  1,480,509
+    deletion                                     121,288
+    duplication                                   54,142
+    microsatellite                                25,431
+    insertion                                     10,957
+    indel                                          8,983
+    variation                                        568
+    inversion                                        448
+
+  Review status unique values (4):
+    criteria provided, single submitter                                 1,257,966
+    criteria provided, multiple submitters, no conflicts                  426,191
+    reviewed by expert panel                                               18,146
+    practice guideline                                                         23
+
+================================================================================
+  6. MISSING VALUE ANALYSIS
+================================================================================
+  --- Missing Value Summary for Important Features ---
+  Feature                                      Missing       Pct  Decision
+  ----------------------------------------  ----------  --------  -----------------------------------
+  Chromosome                                         0     0.00%  REQUIRED — rows already removed
+  PositionVCF                                        0     0.00%  REQUIRED — rows already removed
+  Stop                                               0     0.00%  KEEP — acceptable missingness
+  ReferenceAlleleVCF                                 0     0.00%  KEEP — acceptable missingness
+  AlternateAlleleVCF                                 0     0.00%  KEEP — acceptable missingness
+  GeneSymbol                                         0     0.00%  KEEP — fill missing with 'unknown'
+  Type                                               0     0.00%  KEEP — acceptable missingness
+  ReviewStatus                                       0     0.00%  KEEP — acceptable missingness
+  Origin                                             0     0.00%  KEEP — acceptable missingness
+  RS# (dbSNP)                                        0     0.00%  KEEP — optional identifier
+  GeneID                                             0     0.00%  KEEP — acceptable missingness
+  Name                                               0     0.00%  KEEP — acceptable missingness
+
+  Filled 0 missing values in 'GeneSymbol' with 'unknown'
+
+      MISSING VALUE POLICY:
+        - Essential fields (chromosome, position): rows already removed if missing
+        - Biological values are NOT filled with 0 or arbitrary numbers
+        - 'unknown' is used to distinguish genuinely missing values from 'not applicable'
+        - No imputation of biological features (alleles, sequence, scores)
+    
+
+================================================================================
+  7. FEATURE SELECTION
+================================================================================
+  --- Potential Leakage Columns ---
+    ClinicalSignificance                      Directly encodes the target
+    ReviewStatus                              Correlated with interpretation confidence, but not the target itself. SAFE with caution.
+    PhenotypeList                             Disease associations may correlate with pathogenicity
+
+  --- Selected ML Features ---
+    Chromosome                      [categorical         ]  Chromosome (1-22, X, Y, MT)
+    PositionVCF                     [numeric             ]  Genomic start position (GRCh38)
+    Stop                            [numeric             ]  Genomic stop position (GRCh38)
+    ReferenceAlleleVCF              [categorical/sequence]  Reference allele
+    AlternateAlleleVCF              [categorical/sequence]  Alternate allele
+    GeneSymbol                      [categorical         ]  Gene symbol (HGNC)
+    Type                            [categorical         ]  Variant type (e.g., single nucleotide variant)
+    ReviewStatus                    [ordinal             ]  ClinVar review status (evidence level)
+    Origin                          [categorical         ]  Allele origin (germline, somatic, etc.)
+    variant_length                  [numeric             ]  Length of variant (stop - start)
+    ref_length                      [numeric             ]  Length of reference allele
+    alt_length                      [numeric             ]  Length of alternate allele
+    is_indel                        [binary              ]  1 if insertion/deletion, 0 if substitution
+
+  Total features: 13
+  Target column: 'target'
+  Leakage columns excluded: ['ClinicalSignificance']
+
+================================================================================
+  8. ADDITIONAL FEATURES (not in ClinVar — DO NOT FABRICATE)
+================================================================================
+
+      The following features are NOT present in variant_summary.txt.gz.
+      DO NOT create fake values. They should be obtained from external databases.
+
+      Feature                   Source                  Join Key
+      ─────────────────────────────────────────────────────────────────────
+      Population frequency      gnomAD                  chr:pos:ref:alt
+      Conservation score        UCSC / phastCons        chr:pos (liftover if needed)
+      CADD score                CADD database           chr:pos:ref:alt
+      SIFT score                Ensembl VEP             chr:pos:ref:alt or rs_id
+      PolyPhen2 score           Ensembl VEP             chr:pos:ref:alt or rs_id
+      DNA sequence context      UCSC Genome Browser     chr:pos (±50bp window)
+      Protein domain            InterPro / UniProt      Gene + protein position
+      GC content                Reference genome        chr:pos (local window)
+      Exon / intron location    Ensembl / GENCODE       chr:pos + gene
+
+      How to join:
+        1. Build a variant key: chromosome + ":" + position + ":" + ref + ":" + alt
+        2. Use tabix-indexed VCFs from gnomAD for efficient lookup
+        3. Use Ensembl REST API or VEP for consequence annotations
+        4. For sequence context, query the reference genome FASTA (hg38)
+    
+
+================================================================================
+  9. DATASET CREATION
+================================================================================
+  Dataset A (ClinVar baseline):
+    Rows:     1,702,326
+    Columns:  16
+    Features: ['Chromosome', 'PositionVCF', 'Stop', 'ReferenceAlleleVCF', 'AlternateAlleleVCF', 'GeneSymbol', 'Type', 'ReviewStatus', 'Origin', 'variant_length', 'ref_length', 'alt_length', 'is_indel']
+
+  Dataset B (Extended research stub):
+    Rows:     1,702,326
+    Columns:  23
+    Stub columns (to fill from external sources): ['gnomad_af', 'cadd_score', 'sift_score', 'polyphen2_score', 'phastcons_score', 'gc_content', 'seq_context_50bp']
+
+================================================================================
+  10. DATA LEAKAGE PREVENTION
+================================================================================
+
+      CRITICAL: Why random row-level splitting is DANGEROUS for genomic data
+      ─────────────────────────────────────────────────────────────────────
+      Even after deduplication, related variants can leak information:
+
+      1. Same gene: Variants in the same gene share functional context.
+         A model might learn "gene X → pathogenic" rather than true biology.
+
+      2. Linkage disequilibrium: Nearby variants on the same chromosome
+         are co-inherited and correlated.
+
+      3. Same ClinVar submission: Multiple variants submitted together
+         may share clinical interpretation methodology.
+
+      RECOMMENDED SPLITTING STRATEGIES (safest first):
+      ─────────────────────────────────────────────────
+      1. CHROMOSOME-BASED SPLIT (safest, recommended for first experiment)
+         - Train: chromosomes 1-17
+         - Validation: chromosomes 18-20
+         - Test: chromosomes 21-22, X
+         - Ensures zero overlap of genomic regions
+
+      2. GENE-BASED SPLIT (second choice)
+         - Split by gene: all variants in a gene go to the same set
+         - Prevents gene-level leakage
+         - Use GroupKFold with gene as the group
+
+      3. STRATIFIED RANDOM SPLIT (least safe, but common)
+         - 70/15/15 or 80/10/10 stratified by target
+         - Only acceptable if combined with variant-key deduplication
+         - Risk: related variants may appear in both train and test
+    
+
+================================================================================
+  11. CLASS IMBALANCE ANALYSIS
+================================================================================
+  Pathogenic:     325,257  (19.11%)
+  Benign:       1,377,069  (80.89%)
+  Total:        1,702,326
+  Imbalance ratio: 4.23:1  (Benign majority)
+
+      RECOMMENDED IMBALANCE HANDLING:
+      ───────────────────────────────
+      1. CLASS WEIGHTS (safest, recommended)
+         - Assign inverse-frequency weights during model training
+         - Supported by sklearn, PyTorch, TensorFlow
+         - No synthetic data created → no risk of artefacts
+
+      2. STRATIFIED SPLITTING
+         - Ensure train/val/test maintain the same class proportions
+         - Always use regardless of other balancing methods
+
+      3. FOCAL LOSS
+         - For deep learning models, focal loss down-weights easy examples
+         - Effective for moderate imbalance
+
+      4. SMOTE (use with EXTREME caution)
+         - Only apply AFTER train/test split (never on test data)
+         - For genomic features, SMOTE interpolation may create
+           biologically impossible variants
+         - Only acceptable on numeric feature representations,
+           NOT on raw allele sequences
+
+      RECOMMENDATION: Start with class weights + stratified splitting.
+      These are safe, simple, and biologically sound.
+    
+
+================================================================================
+  12. SAVING OUTPUT FILES
+================================================================================
+  Saved: C:\Users\kavya\VariantIQ\output\data\clinvar_cleaned.csv (1,702,326 rows, 50 cols)
+  Saved: C:\Users\kavya\VariantIQ\output\data\clinvar_ml_dataset.csv (1,702,326 rows, 16 cols)
+  Saved: C:\Users\kavya\VariantIQ\output\data\removed_records.csv (7,521,372 rows)
+  Saved: C:\Users\kavya\VariantIQ\output\data\feature_dictionary.csv (13 features)
+
+================================================================================
+  13. FINAL QUALITY REPORT
+================================================================================
+  Original row count:           9,223,698
+  Final row count:              1,702,326
+  Removed rows:                 7,521,372
+  Pathogenic variants:            325,257
+  Benign variants:              1,377,069
+  Excluded/uncertain:           5,636,534
+  Duplicate-related removed:             0
+
+  Final feature list: ['Chromosome', 'PositionVCF', 'Stop', 'ReferenceAlleleVCF', 'AlternateAlleleVCF', 'GeneSymbol', 'Type', 'ReviewStatus', 'Origin', 'variant_length', 'ref_length', 'alt_length', 'is_indel']
+  Potential leakage columns: ['ClinicalSignificance']
+  Class distribution: Pathogenic=325,257 (19.1%), Benign=1,377,069 (80.9%)
+  Recommended strategy: Chromosome-based split + class weights
+
+  Script completed at: 2026-10-08T09:41:01.103540
+  Total runtime: 0:20:07.411614

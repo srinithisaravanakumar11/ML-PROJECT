@@ -1,0 +1,16 @@
+
+# Large local datasets and trained models
+/variant_summary.txt.gz
+/output/clinvar_ml_dataset.csv
+/output/clinvar_cleaned.csv
+/output/removed_records.csv
+/output/clinvar_extended_dataset.csv
+/output/clinvar_enhanced_dataset.csv
+/output/saved_models/
+/output/data/clinvar_ml_dataset.csv
+/output/data/clinvar_cleaned.csv
+/output/data/removed_records.csv
+/output/data/clinvar_extended_dataset.csv
+/output/data/clinvar_enhanced_dataset.csv
+__pycache__/
+.venv/

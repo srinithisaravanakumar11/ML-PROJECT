@@ -1,0 +1,14 @@
+feature,description,role
+Chromosome,"Chromosome (1-22, X, Y, MT)",categorical
+PositionVCF,Genomic start position (GRCh38),numeric
+Stop,Genomic stop position (GRCh38),numeric
+ReferenceAlleleVCF,Reference allele,categorical/sequence
+AlternateAlleleVCF,Alternate allele,categorical/sequence
+GeneSymbol,Gene symbol (HGNC),categorical
+Type,"Variant type (e.g., single nucleotide variant)",categorical
+ReviewStatus,ClinVar review status (evidence level),ordinal
+Origin,"Allele origin (germline, somatic, etc.)",categorical
+variant_length,Length of variant (stop - start),numeric
+ref_length,Length of reference allele,numeric
+alt_length,Length of alternate allele,numeric
+is_indel,"1 if insertion/deletion, 0 if substitution",binary

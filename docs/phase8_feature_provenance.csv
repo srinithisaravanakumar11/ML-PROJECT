@@ -1,0 +1,10 @@
+Feature,Assessment,Evidence,Used_by_Phase5
+gnomAD_AF,TARGET-CONDITIONED SYNTHETIC,estimate_gnomad_af_by_consequence() chooses pathogenic or benign distributions using is_pathogenic.,True
+gnomAD_AF_popmax,DERIVED FROM TARGET-CONDITIONED SYNTHETIC FEATURE,Calculated from synthetic gnomAD_AF multiplied by a random factor.,True
+CADD_phred,TARGET-CONDITIONED SYNTHETIC,estimate_cadd_score() chooses separate distributions using is_pathogenic.,True
+SIFT_score,TARGET-CONDITIONED SYNTHETIC,estimate_sift_polyphen() chooses separate SIFT distributions using is_pathogenic.,True
+PolyPhen2_score,TARGET-CONDITIONED SYNTHETIC,estimate_sift_polyphen() chooses separate PolyPhen-2 distributions using is_pathogenic.,True
+phastCons_100way,TARGET-CONDITIONED SYNTHETIC,estimate_phastcons() chooses separate conservation distributions using is_pathogenic.,True
+gc_content,SYNTHETIC; NOT AN EXTERNAL ANNOTATION,Generated from a random distribution; function does not query a reference genome.,True
+cpg_count,SYNTHETIC; NOT AN EXTERNAL ANNOTATION,Generated from a random distribution parameterized by synthetic gc_content.,True
+homopolymer_max_len,SYNTHETIC; NOT AN EXTERNAL ANNOTATION,"Generated from a random geometric distribution, not computed from sequence.",True
